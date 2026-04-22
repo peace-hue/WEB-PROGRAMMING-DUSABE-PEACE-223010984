@@ -4,134 +4,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Web site</title>
+    <title>Development Project</title>
+
     <style>
-        /* Basic Reset */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: "Times New Roman", Times, serif;
+        body {
+            font-family: Arial, sans-serif;
         }
 
-        /* Blue Top Bar */
-        header {
-            background-color: #0000FF; /* Pure Blue */
-            padding: 10px 20px;
+ 
+        .header {
+            background-color: blue;
+            padding: 10px;
+        }
+
+        .header input {
+            padding: 5px;
+        }
+
+        .container {
             display: flex;
-            align-items: center;
         }
 
-        .search-container {
-            background-color: white;
-            display: inline-block;
-            padding: 2px;
-        }
-
-        input[type="text"] {
-            border: 1px solid #ccc;
-            padding: 2px;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-        /* Layout Container */
-        .wrapper {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        /* Yellow Sidebar */
-        nav {
-            background-color: #FFFF66; /* Bright Yellow */
+        .sidebar {
             width: 200px;
+            background-color: yellow;
+            padding: 10px;
+            height: 400px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: black;
+        }
+
+    
+        .content {
+            flex: 1;
             padding: 20px;
-            flex-shrink: 0;
         }
 
-        nav ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        nav ul li {
-            margin-bottom: 5px;
-        }
-
-        nav a {
-            color: blue;
-            text-decoration: underline;
-        }
-
-        /* Main Content Area */
-        main {
-            padding: 40px;
-            flex-grow: 1;
+        .content img {
+            width: 250px;
+            display: block;
+            margin-bottom: 10px;
         }
 
         h1 {
             text-align: center;
-            font-weight: bold;
-            font-size: 24px;
-            margin-top: 0;
         }
 
-        .content-body {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .featured-image {
-            width: 350px;
-            height: auto;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        p {
-            line-height: 1.4;
-            font-size: 16px;
-            text-align: justify;
+        h2 {
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="search-container">
-            <input type="text">
-            <button type="button">Search...</button>
-        </div>
-    </header>
+    <h2>DEVELOPMENT PROJECT</h2>
 
-    <div class="wrapper">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Doc</a></li>
-            </ul>
-        </nav>
-
-        <main>
-            <h1>My Web site</h1>
-            
-            <div class="content-body">
-                <img src="project.png/250x200" alt="Solar components" class="featured-image">
-
-                <p>
-                    As the software industry moves into the second decade of the 21st century, 
-                    software quality is increasingly becoming essential to all businesses and 
-                    knowledge of software testing is becoming necessary for all software engineers. 
-                    The course focus on the theoretical concepts of Software Testing with high 
-                    emphasis on inclusion of the practical context which is equally needed to 
-                    prepare the learner for the demands of this field in the workplace.
-                </p>
-            </div>
-        </main>
+    <!-- Header -->
+    <div class="header">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
     </div>
+
+    <!-- Main layout -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+            <a href="#">Doc</a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h1>My Web site</h1>
+
+            <img src="project.jpg">
+
+            <p>
+                As the software industry moves into the second decade of the 21st century,
+                software quality is increasingly becoming essential to all businesses and
+                knowledge of software testing is becoming necessary for all software engineers.
+                The course focuses on the theoretical concepts of Software Testing with high
+                emphasis on inclusion of the practical context which is equally needed to
+                prepare the learner for the demands of this field in the workplace.
+            </p>
+        </div>
+
+    </div>
+
+
+
+
 
 </body>
 </html>
