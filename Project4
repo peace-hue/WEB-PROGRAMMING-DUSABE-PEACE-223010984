@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
 
+    <style>
+        body {
+            font-family: Arial;
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            background: #ddd;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #3b8edb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .result-box {
+            margin-top: 15px;
+            background: black;
+            color: white;
+            padding: 15px;
+            height: 80px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Currency Converter APP</h2>
+
+    <!-- Amount -->
+    <label>Enter Amount (FRW)</label>
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <!-- Currency -->
+    <label>Select Currency</label>
+    <select id="currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EURO</option>
+    </select>
+
+    <!-- Rate -->
+    <label>Rate</label>
+    <input type="number" id="rate" placeholder="Enter rate">
+
+    <!-- Button -->
+    <button onclick="convertCurrency()">CONVERT</button>
+
+    <!-- Result -->
+    <label>Result</label>
+    <div class="result-box" id="result">
+        Result Here ....
+    </div>
+
+</div>
+
+<script>
+
+function convertCurrency() {
+    let amount = document.getElementById("amount").value;
+    let rate = document.getElementById("rate").value;
+    let currency = document.getElementById("currency").value;
+
+    // Validation
+    if (amount === "" || rate === "") {
+        alert("Please enter amount and rate");
+        return;
+    }
+
+    // Convert
+    let converted = amount * rate;
+
+    // Display result
+    document.getElementById("result").innerHTML =
+        amount + " FRW = " + converted.toFixed(2) + " " + currency;
+}
+
+</script>
+
+</body>
+</html>
